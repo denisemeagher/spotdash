@@ -6,15 +6,17 @@ $(document).on("keypress", "input", function(e) {
       dataType: "json",
       type: "get"
     }).done(function(data){
-      $(".container").empty();
-      console.log(data) 
+      $("results").empty();
+      console.log(data)
       data.forEach(function(value){
         console.log(value);
-        $(".container")
-            .append(`<div class="col-md4">
+        $("results")
+            .append(`<div class="results">
                 <p> ${value.name} =>  ${value.type} </p>
+
                 <a href="#" id="save_artist" data-artist="${value.name}"> Save Artist </a>
                 <a href="#" id="show_artist"> Show Albums </a>
+
               </div>`)
       })
     })

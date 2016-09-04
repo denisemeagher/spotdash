@@ -4,5 +4,10 @@ class DashboardController < ApplicationController
   def home
 
   end
-  
+
+  def create
+    @user = User.new
+
+  end
+
 end
